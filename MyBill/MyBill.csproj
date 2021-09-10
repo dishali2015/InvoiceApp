@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46A17A7D-A705-43E3-B002-5B75732EEAEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyBill</RootNamespace>
+    <AssemblyName>MyBill</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VB.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.12.0.5000.0\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\BillContext.cs" />
+    <Compile Include="DAL\Tax.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethod\ExtensionMethod.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHSNList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHSNList.Designer.cs">
+      <DependentUpon>frmHSNList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHSNMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHSNMaster.Designer.cs">
+      <DependentUpon>frmHSNMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoice.Designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoiceList.Designer.cs">
+      <DependentUpon>frmInvoiceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaParty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaParty.Designer.cs">
+      <DependentUpon>frmMaParty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaPartyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaPartyList.Designer.cs">
+      <DependentUpon>frmMaPartyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductList.Designer.cs">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductMaster.Designer.cs">
+      <DependentUpon>frmProductMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportShow.Designer.cs">
+      <DependentUpon>frmReportShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaxMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaxMaster.Designer.cs">
+      <DependentUpon>frmTaxMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericDataAccess.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MaParty.cs" />
+    <Compile Include="Model\MaHSN.cs" />
+    <Compile Include="Model\MaState.cs" />
+    <Compile Include="Model\MaTax.cs" />
+    <Compile Include="Model\MaUnit.cs" />
+    <Compile Include="MyBillDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyBillDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ViewModel\CompanyInfo.cs" />
+    <Compile Include="ViewModel\getPartyList_Result.cs" />
+    <Compile Include="ViewModel\ProductDetail.cs" />
+    <Compile Include="WebConfigReader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHSNList.resx">
+      <DependentUpon>frmHSNList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHSNMaster.resx">
+      <DependentUpon>frmHSNMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoiceList.resx">
+      <DependentUpon>frmInvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaParty.resx">
+      <DependentUpon>frmMaParty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaPartyList.resx">
+      <DependentUpon>frmMaPartyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductList.resx">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductMaster.resx">
+      <DependentUpon>frmProductMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportShow.resx">
+      <DependentUpon>frmReportShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaxMaster.resx">
+      <DependentUpon>frmTaxMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoice.rdlc" />
+    <EmbeddedResource Include="Reports\InvoiceTemplate.rdlc" />
+    <EmbeddedResource Include="MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyBillDataSet.xsc">
+      <DependentUpon>MyBillDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyBillDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyBillDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyBillDataSet.xss">
+      <DependentUpon>MyBillDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\company-name-vector-logo1.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\sample-company-logo.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InvoiceContext\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
